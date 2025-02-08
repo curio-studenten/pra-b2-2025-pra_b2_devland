@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeveloperLand - Het meest leerzame prepark voor het hele gezin!</title>
+  <title>DeveloperLand - Het meest leerzame pretpark voor het hele gezin!</title>
 
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -11,30 +11,68 @@
   <header>
     <div class="header-content">
       <div class="wrapper">
-        <img src="images/logo-big-v3.png" alt="Het logo van DeveloperLand met een draaimolen, kasteel, achtbaan en tot slot een gezin op de voorgrond." class="logo hidden-on-sm">
+        <img src="images/logo-big-v3.png" alt="Het logo van DeveloperLand" class="logo hidden-on-sm">
         <h1 class="hidden-on-lg">DeveloperLand</h1>
       </div>
     </div>
   </header>
+  
   <main>
     <div class="wrapper">
       <article>
         <h2>Winkelwagentje</h2>
         <div>
           <span>Dit zijn alle producten die u gaat bestellen. Controleer een laatste keer of alles klopt en ga daarna verder met de grote groene knop.</span>
-          <!-- 
-            Winkelwagen hier
-          -->
-          
+
+          <!-- Winkelwagen tabel -->
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th class="slim">Prijs (enkel)</th>
+                <th class="slim">Aantal</th>
+                <th class="slim">Prijs (totaal)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Entreekaartje Kind t/m 3 jaar</td>
+                <td>€ 0</td>
+                <td>1</td>
+                <td>€ 0</td>
+              </tr>
+              <tr>
+                <td>Entreekaartje Regulier</td>
+                <td>€ 24,95</td>
+                <td>2</td>
+                <td>€ 49,90</td>
+              </tr>
+              <tr>
+                <td>Entreekaartje Senior</td>
+                <td>€ 14,95</td>
+                <td>1</td>
+                <td>€ 14,95</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2"></td> <!-- Lege cellen voor correcte uitlijning -->
+                <td><strong>Totaalsom (incl. btw)</strong></td>
+                <td><strong>€ 64,85</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+
           <button>Dit is correct, verder naar betaling</button>
         </div>
       </article>
     </div>
   </main>
+
   <footer>
     <div class="wrapper">
       <div class="copyright">
-        &copy; 2020 - 2021  DeveloperLand&nbsp;&nbsp;All Rights Reserved
+        &copy; 2025 DeveloperLand&nbsp;&nbsp;All Rights Reserved
       </div>
     </div>
   </footer>

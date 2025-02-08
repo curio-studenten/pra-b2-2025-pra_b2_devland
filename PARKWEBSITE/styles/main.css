@@ -179,6 +179,24 @@ footer{
   display: block;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Zorgt dat elementen op een nieuwe rij springen als er geen ruimte is */
+  gap: 1em;
+  justify-content: space-between; /* Verdeelt de ruimte tussen de elementen */
+}
+
+.row article {
+  flex: 1 1 calc(48%); /* Artikelen nemen ongeveer de helft van de rijbreedte in */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .row article {
+    flex: 1 1 100%; /* Artikelen onder elkaar op kleinere schermen */
+  }
+}
+
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px

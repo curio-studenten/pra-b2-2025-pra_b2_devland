@@ -1,27 +1,41 @@
-body, html {
+/*
+  Afgesproken kleuren:
+
+    * Lichte achtergrond: #FCFCFC
+    * Medium achtergrond: #CCCCCC
+    * Donkere achtergrond: #303030
+
+    * Primaire kleur: #27AE60
+    * Secundaire kleur: #2F80ED
+*/
+
+body, html{
   margin: 0;
   padding: 0;
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #FCFCFC;
 }
 
-.wrapper {
+.wrapper{
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
 }
 
-header {
+header{
   background: url('../images/park01.jpg');
   background-size: cover;
   background-position: center;
   background-color: #CCCCCC;
 }
 
-.header-content {
+.header-content{
   padding: 1em;
+
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
+
   -webkit-animation: fadein 4s;
   -moz-animation: fadein 4s;
   -ms-animation: fadein 4s;
@@ -29,12 +43,12 @@ header {
   animation: fadein 4s;
 }
 
-.logo {
+.logo{
   margin: 0 auto;
   width: 512px;
 }
 
-h1 {
+h1{
   margin: 0;
   font-family: 'Heartbeat';
   color: #27AE60;
@@ -60,71 +74,80 @@ article:first-of-type h2 {
   padding-bottom: 2px;
 }
 
-main {
+main{
   padding: 1em;
 }
 
-table {
+table{
   margin-top: 1em;
   width: 100%;
   border-collapse: collapse;
 }
 
-table th {
+table th{
   text-align: start;
 }
 
-table thead, table tbody {
+table thead, table tbody{
   border-bottom: 1px solid #303030;
 }
 
-table th.slim {
+table th.slim{
   width: 100px;
 }
 
-table tfoot {
+table tfoot{
   font-weight: bold;
 }
 
-article {
+article{
   padding-left: 10px;
   margin: 1em 1em 1em 0;
 }
-
-article:last-of-type {
+article:last-of-type{
   margin-right: 0;
 }
 
-article h2 {
+article h2{
   margin: 0;
   padding: 1.5em;
   background-position: center;
   background-size: cover;
   text-align: center;
 }
+article h2.fun-for-family{
+  background-image: url('../images/family-fun-george-arthur-pflueger.jpg');
+}
+article h2.accessibility{
+  background-image: url('../images/accessible-eunice-stahl.jpg');
+}
+article h2.rides{
+  background-image: url('../images/drone-drew-dau.jpg');
+}
+article h2.open-forever{
+  background-image: url('../images/open-james-lee.jpg');
+}
 
-.product {
+.product{
   margin-right: 1em;
   padding: 1em;
   background: #CCCCCC;
   text-align: center;
 }
-
-.product:last-of-type {
+.product:last-of-type{
   margin-right: 0;
 }
 
-.product span {
+.product span{
   display: block;
 }
-
-.product img {
+.product img{
   width: 100%;
   max-width: 250px;
   margin: 0 auto;
 }
 
-button {
+button{
   width: 100%;
   margin-top: 1em;
   padding: .5em;
@@ -134,34 +157,48 @@ button {
   font-weight: bold;
 }
 
-.payment-option {
-  height: 64px;
-  max-width: 120px;
-  object-fit: contain;
-}
-
-.side-by-side {
+.payment-options {
   display: flex;
+  justify-content: space-between; /* Betaalmethodes naast elkaar op desktop */
   gap: 1em;
-  justify-content: space-between;
-  align-items: center;
 }
 
-footer {
+.payment-option {
+  width: calc(30% - 0.5em); /* Zorgt dat de betaalmethodes 25% van de breedte innemen */
+}
+
+.payment-option img {
+  width: auto;  /* Zorg ervoor dat de breedte automatisch is */
+  height: 64px; /* Stel een vaste hoogte in */
+  max-width: 100%; /* Zorg ervoor dat de afbeelding niet groter is dan de container */
+}
+
+@media (max-width: 768px) {
+  .payment-options {
+    flex-direction: column; /* Zet de betaalmethodes onder elkaar op mobiel */
+  }
+
+  .payment-option {
+    width: 100%; /* Maak ze 100% breed op kleinere schermen */
+    margin-bottom: 1em; /* Ruimte tussen de betaalmethodes */
+    width: calc(30% - 1em);
+  }
+}
+
+footer{
   padding: 1em;
   background: #303030;
   color: #ffffff;
 }
 
-.copyright {
+.copyright{
   text-align: center;
 }
 
-.hidden-on-lg {
+.hidden-on-lg{
   display: none;
 }
-
-.hidden-on-sm {
+.hidden-on-sm{
   display: block;
 }
 
@@ -181,10 +218,25 @@ footer {
   .row article {
     flex: 1 1 100%;
   }
+}
 
+.side-by-side {
+  display: flex;
+  justify-content: space-between; /* Zorg ervoor dat ze naast elkaar staan */
+  gap: 1em;
+}
+
+.side-by-side > article {
+  flex: 1 1 calc(48%);
+}
+
+@media (max-width: 768px) {
   .side-by-side {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .side-by-side > article {
+    flex: 1 1 100%;
   }
 }
 

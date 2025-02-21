@@ -253,11 +253,11 @@ footer{
 
 @font-face {
   font-family: 'Heartbeat';
-  src:  url('fonts/heartbeat.eot') format('eot'),
-        url('fonts/heartbeat.otf') format('otf'),
+  src:  url('fonts/heartbeat.eot') format('embedded-opentype'),
+        url('fonts/heartbeat.otf') format('opentype'),
         url('fonts/heartbeat.woff') format('woff'),
         url('fonts/heartbeat.svg') format('svg'),
-        url('fonts/heartbeat.ttf') format('ttf');
+        url('fonts/heartbeat.ttf') format('truetype');
 }
 
 @keyframes fadein {

@@ -63,6 +63,12 @@ h1{
 h2 {
   border-left: none;
   padding-left: 10px;
+  text-shadow:  
+    0 0 0 #FCFCFC,
+    -1px -1px 0 #FCFCFC,
+    1px -1px 0 #fcfcfc,
+    -1px 1px 0 #FCFCFC,
+    1px 1px 0 #FCFCFC;
 }
 
 article:first-of-type h2 {
@@ -204,16 +210,22 @@ footer{
 
 .row {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
+
 .row article {
-  flex: 1;
-  margin: 0 10px;
+  flex: 1 1 calc(48%);
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
   .row article {
     flex: 1 1 100%;
   }

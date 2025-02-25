@@ -221,6 +221,18 @@ footer{
   flex: 1 1 calc(48%);
   box-sizing: border-box;
 }
+.row article h2.fun-for-family{
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row article h2.accessibility{
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 768px) {
   .row {
@@ -231,12 +243,28 @@ footer{
   }
 }
 
+article h2.open-forever{
+  font-size: 1.2rem;
+}
+.row article h2.open-forever{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .side-by-side {
   display: flex;
   justify-content: space-between; /* Zorg ervoor dat ze naast elkaar staan */
+  align-items: stretch;
   gap: 1em;
 }
 
+.side-by-side >article h2{
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .side-by-side > article {
   flex: 1 1 calc(48%);
 }

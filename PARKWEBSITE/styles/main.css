@@ -69,6 +69,14 @@ h2 {
     1px -1px 0 #fcfcfc,
     -1px 1px 0 #FCFCFC,
     1px 1px 0 #FCFCFC;
+    margin:0, 0;
+}
+
+.emphasize {
+  border-left: 5px solid #27AE60;
+  box-shadow: 1px 0 5px #27AE60;
+  padding: 1em;
+  text-align: center;
 }
 
 article:first-of-type h2 {
@@ -78,6 +86,20 @@ article:first-of-type h2 {
   line-height: 0.8;
   padding-top: 2px;
   padding-bottom: 2px;
+}
+
+.side-by-side {
+  display: flex;             
+  justify-content: space-between;  
+  gap: 20px;               
+  flex-wrap: wrap;         
+}
+
+@media (max-width: 480px) {
+  .side-by-side {
+    flex-direction: column;  
+    align-items: center;     
+  }
 }
 
 main{
@@ -161,6 +183,7 @@ button{
   border: 2px solid #FCFCFC;
   color: #000000;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .payment-options {
@@ -206,6 +229,16 @@ footer{
 }
 .hidden-on-sm{
   display: block;
+}
+
+@media (max-width: 480px) {
+  .hidden-on-lg {
+    display: block;
+  }
+  
+  .hidden-on-sm {
+    display: none;
+  }
 }
 
 .row {
